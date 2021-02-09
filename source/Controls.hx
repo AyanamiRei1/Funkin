@@ -625,26 +625,25 @@ class Controls extends FlxActionSet
 		addGamepadLiteral(id, [
 			Control.ACCEPT => [A],
 			Control.BACK => [B],
-			Control.UP => [DPAD_UP, LEFT_STICK_DIGITAL_UP],
-			Control.DOWN => [DPAD_DOWN, LEFT_STICK_DIGITAL_DOWN],
+			Control.UP => [Y],
+			Control.DOWN => [DPAD_UP],
 			Control.LEFT => [DPAD_LEFT, LEFT_STICK_DIGITAL_LEFT],
-			Control.RIGHT => [DPAD_RIGHT, LEFT_STICK_DIGITAL_RIGHT],
+			Control.RIGHT => [B],
 			Control.PAUSE => [START],
-			Control.RESET => [Y]
+			Control.RESET => [DPAD_DOWN]
 		]);
 		#else
 		addGamepadLiteral(id, [
 			//Swap A and B for switch
-			Control.ACCEPT => [B],
-			Control.BACK => [A],
-			Control.UP => [DPAD_UP, LEFT_STICK_DIGITAL_UP, RIGHT_STICK_DIGITAL_UP],
-			Control.DOWN => [DPAD_DOWN, LEFT_STICK_DIGITAL_DOWN, RIGHT_STICK_DIGITAL_DOWN],
-			Control.LEFT => [DPAD_LEFT, LEFT_STICK_DIGITAL_LEFT, RIGHT_STICK_DIGITAL_LEFT],
-			Control.RIGHT => [DPAD_RIGHT, LEFT_STICK_DIGITAL_RIGHT, RIGHT_STICK_DIGITAL_RIGHT],
+			Control.ACCEPT => [A],
+			Control.BACK => [B],
+			Control.UP => [Y],
+			Control.DOWN => [DPAD_UP],
+			Control.LEFT => [DPAD_LEFT, LEFT_STICK_DIGITAL_LEFT],
+			Control.RIGHT => [B],
 			Control.PAUSE => [START],
-			//Swap Y and X for switch
-			Control.RESET => [Y],
-			Control.CHEAT => [X]
+		        //Swap Y and X for switch
+			Control.RESET => [DPAD_DOWN]
 		]);
 		#end
 	}
